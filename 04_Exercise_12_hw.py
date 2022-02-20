@@ -1,5 +1,7 @@
 # QUESTION 1
 
+# Answer version 1
+
 cheese = ['Cheddar', 'Stilton', 'Cornish Yarg']
 cheese += 'Oke'
 print(cheese)
@@ -13,14 +15,37 @@ print(cheese)
 cheese.extend(['brie', 'camembert'])
 print(cheese)
 
+# Answer version 2
+cheese = ["Cheddar", "Stilton", "Cornish Yarg"]
+
+cheese.append("Oke")
+print(cheese)
+
+
+# new_cheese = ["Red Leicester", "Mozzarella"]
+# cheese.extend(new_cheese)
+cheese.extend(["Red Leicester", "Mozzarella"])
+print(cheese)
+
 ###
 
 # QUESTION 2
+
+# Version 1
 # This prints 5
 tup = 'Hello'
 print(len(tup))
 
 # But this prints 1 due to the trailing comma - thinks it's half a tuple so there is 1 x tuple.
+tup = 'Hello',
+print(len(tup))
+
+# Version 2
+# Measuring length of string
+tup = 'Hello'
+print(len(tup))
+
+# Measuring length of tuple
 tup = 'Hello',
 print(len(tup))
 
@@ -48,3 +73,9 @@ for i in range (0,6):
 print(lottery_numbers)
 
 ### Method 2 (Ellas)
+import random
+
+numbers_between_one_fifty = list(range(1, 50))
+
+lottery = random.sample(numbers_between_one_fifty, 6)
+print(f"Your lottery ticket numbers are:", str(lottery))
